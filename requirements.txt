@@ -1,0 +1,5 @@
+python-docx>=1.1.2
+lxml>=5.2.2
+pysbd>=0.3.4
+pandas>=2.2.2
+pytest>=8.2.0
