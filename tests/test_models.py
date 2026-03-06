@@ -5,6 +5,10 @@ def test_block_type_covers_required_values() -> None:
     values = {item.value for item in BlockType}
     assert values == {
         "paragraph",
+        "heading",
+        "image",
+        "table",
+        "equation",
         "table_cell",
         "textbox_paragraph",
         "footnote_paragraph",
@@ -25,6 +29,7 @@ def test_block_defaults_and_required_fields() -> None:
     assert block.block_id == "B000001"
     assert block.heading_level == 0
     assert block.heading_path == ""
+    assert block.image_path is None
     assert block.style_id is None
     assert block.para_id is None
 

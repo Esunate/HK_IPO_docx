@@ -7,6 +7,10 @@ from typing import Optional
 
 class BlockType(Enum):
     PARAGRAPH = "paragraph"
+    HEADING = "heading"
+    IMAGE = "image"
+    TABLE = "table"
+    EQUATION = "equation"
     TABLE_CELL = "table_cell"
     TEXTBOX_PARAGRAPH = "textbox_paragraph"
     FOOTNOTE_PARAGRAPH = "footnote_paragraph"
@@ -23,6 +27,7 @@ class Block:
     raw_text: str
     heading_level: int = 0
     heading_path: str = ""
+    image_path: Optional[str] = None
     style_id: Optional[str] = None
     para_id: Optional[str] = None
 
@@ -36,6 +41,7 @@ class Sentence:
     heading_level: int
     heading_path: str
     text: str
+    image_path: Optional[str] = None
     qa_flags: list[str] = field(default_factory=list)
     is_fallback: bool = False
 
